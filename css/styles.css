@@ -276,13 +276,13 @@ nav a:hover {
 
 .content-bg.slide-item.left {
     /* slides in from the left to the center */
-    background: rgba(110, 43, 2, 0.8);
+    background: rgba(228, 28, 2, 0.8);
     display: inline-block;
     color: whitesmoke;
 }
 
 .content-bg.slide-item.left p {
-    background: rgb(61, 24, 1);
+    background: rgba(146, 15, 11, 0.8);
     margin: 0 auto;
     padding: 15px;
     max-width: 80%;
