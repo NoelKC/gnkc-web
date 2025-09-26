@@ -109,6 +109,19 @@ a:hover {
     border-radius: 4px;
 }
 
+/* Download link for CV/ Resume */
+.download-link {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 1.6rem;
+}
+@media screen and (max-width:1200px){
+    .download-link {
+        position: absolute;
+    }
+}
+
 /* slide-items*/
 /* NEED TO CHANGE -> this is what is causing everything not to fill the screen*/
 

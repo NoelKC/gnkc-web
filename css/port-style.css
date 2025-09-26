@@ -200,6 +200,20 @@ nav a:hover {
     }
 }
 
+/* Category selection button */
+.cat-select {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 1.6rem;
+}
+/* @media screen and (max-width:1200px){
+    .download-link {
+        position: absolute;
+    }
+} */
+
+
 .content-wrapper {
     margin: 0 auto;
     padding: 30px;

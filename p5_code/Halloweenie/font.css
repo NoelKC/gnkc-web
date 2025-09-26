@@ -1,0 +1,10 @@
+
+
+
+@font-face { font-family: Hallo; src: url('assets/stigma_hallo.ttf'); } 
+.hallo { font-family: Hallo; font-size: 5em; }
+
+@font-face { font-family: OldP; src: url('assets/old_pixel-7.ttf'); } 
+.oldP { font-family: OldP; font-size: 5em; }
+
+
