@@ -31,7 +31,7 @@
   <!-- //  particle BG  // -->
   <canvas id="bg"></canvas>
 
-  <!-- //  INTRO  // -->
+  <!-- //  SIDEBAR  // -->
   <nav>
     <!-- Start content  -->
     <ul class="sidebar">
@@ -67,7 +67,7 @@
     </ul>
     <!-- End content -->
   </nav>
-  <!-- nav bar scripts -->
+   <!-- nav bar scripts -->
   <script>
     function showSidebar() {
       const sidebar = document.querySelector('.sidebar')
@@ -79,12 +79,53 @@
     }
   </script>
 
+  <!-- Category Selection Sidebar Button --> 
+   <div class="cat-sidebar " style="display:none" id="myCatBar">
+  <button onclick="catClose()" class="close-btn">Close &times;</button>
+  <ul>
+    <li><a href="#wip">CURRENT WORK</a></li>
+    <li><a href="#code">CODING</a></li>
+    <li><a href="#digital">DIGITAL ART</a></li>
+    <li><a href="#pho-vid" >PHOTOGRAPHY & VIDEO</a></li>
+    <li><a href="#misc" >MISC.</a></li>
+    <li><a href="../archive/index.html" >ARCHIVE</a></li>
+  </ul>
+</div>
+  <div class=""> 
+    <button class="cat-select" onclick="catOpen()" >
+  <img src="../images/flower-icon/blue-purple-flower-icon.png" alt="category icon button" onmouseenter="this.src='../images/flower-icon/blue-flower-icon.gif'" onmouseleave="this.src='../images/flower-icon/blue-purple-flower-icon.png'" onmousedown="this.src='../images/flower-icon/blue-flower-icon.png'" onmouseup="this.src='../images/flower-icon/blue-purple-flower-icon.png'"> </button>
+</div>
+<script>
+function catOpen() {
+  document.getElementById("myCatBar").style.display = "block";
+}
+
+function catClose() {
+  document.getElementById("myCatBar").style.display = "none";
+}
+</script>
+  
+
   <header>
     <h1 class="content-bg">PORTFOLIO</h1>
   </header>
   <main>
-    <!-- Category Selection Sidebar Button --> 
-  <img class="cat-select " src="" alt="">
+    <div class="content-wrapper" id="wip">
+      <div class="content-bg green-bg">
+        <h2> Currently Working On...  </h2>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="content-bg">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5adNENU61nc?si=oZjSQx4F-owwvB9M"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p> I am working on my group DMA BFA Exhibition at <a href="https://workssanjose.org/" target="_blank">Works / San José</a> from November 14 - 25, 2025. My piece is called Proper Doll which includes physical and digital elements. 
+        </p>
+        <a href="https://youtube.com/playlist?list=PLeZC2Yk5HoL0mEbZOwiog9j9d-fuUGExS&feature=shared" target="_blank">Here is a playlist with my Docmuentation of the progress so far</a>
+      </div>
+    </div>
 
 
 
@@ -93,191 +134,6 @@
     <div class="content-wrapper" id="code">
       <div class="content-bg orange-bg">
         <h2> CODING </h2>
-      </div>
-    </div>
-    <!-- Pacman
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> Pacman </h3>
-        <img src="../images/code-images/pacman.jpg" alt=""> 
-        <br>
-        <p> 2022 </p>
-        <p> This is a interactive pacman artwork made using p5.js.  </p>
-          <a href="https://noelkc.github.io/noel.portfolio/p5_code/pacman/index.html" target="_blank"> Run Pacman Program (you need a pc to run this)</a>
-      </div>
-    </div> -->
-    <!-- Combo Dinner -->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> Combo Dinner </h3>
-        <div class="carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-            </svg></button>
-          <button class="carousel-button next" data-carousel-button="next"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-            </svg></button>
-          <ul data-slides>
-            <li class="slide" data-active>
-              <img class="long-img" src="../images/code-images/combo-dinner/Ex1_Combo_Dinner.png" alt="" >
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/code-images/combo-dinner/ex1thumb.png" alt="">
-            </li>
-          </ul>
-        </div>
-        <br>
-        <p> 2022 </p>
-        <p> This is interactive artwork made using p5.js. The art will change depending on your mouse. </p>
-          <a href="https://noelkc.github.io/noel.portfolio/p5_code/combo-dinner/index.html" target="_blank"> Run Combo Dinner Program (you need a pc to run this)</a>
-      </div>
-    </div>
-    <!-- paint program -->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> Paint Program </h3>
-        <div class="carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-            </svg></button>
-          <button class="carousel-button next" data-carousel-button="next"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-            </svg></button>
-          <ul data-slides>
-            <li class="slide" data-active>
-              <img src="../images/code-images/paint/paint-program-example.png" alt="" >
-            </li>
-            <li class="slide">
-              <img src="../images/code-images/paint/1-paint-program.png" alt="">
-            </li>
-            <li class="slide">
-              <img src="../images/code-images/paint/2-paint-program.png" alt="">
-            </li>
-          </ul>
-        </div>
-        <br>
-        <p> Sep 13, 2023</p>
-        <p> This is a simple paint program that I made. I was mainly experimenting with lines, shapes, colors, opacity,
-          and photos. It took a lot of trial and error but I finally got them all to work. A lot of them are really
-          messy but still nice to look at. They don’t work well to draw an image or drawing with but they are fun to
-          play with and make a cool background with. </p>
-          <a href="https://noelkc.github.io/noel.portfolio/p5_code/paint/index.html" target="_blank"> Run Paint Program (you need a pc to run this)</a>
-      </div>
-    </div>
-    
-    <!-- pikmin -->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> Pikmin </h3>
-        <img src="../images/code-images/pikmin-ex.jpg" alt="pikmin made with js">
-        <p>Sep 25, 2023</p>
-        <p>This fanart of Pikmin. I wanted to make a small interactive piece with these little guys
-          since they are from one of my favorite games (<a href="https://pikmin.nintendo.com/" target="_blank">here</a>are some
-          reference photos on the Nintendo website and <a
-            href="https://pikmin.nintendo.com/en/comics/#!/too-stuck-to-pluck" target="_blank">here</a>is the link to the comics, they
-          are still updating them!).
-          This was my first time working with classes but the process was pretty straight forward. I had a lot of fun
-          making all of these little guys and getting them to move across the </p>
-          <a href="https://noelkc.github.io/noel.portfolio/p5_code/pikmin/index.html" target="_blank"> Run Pikmin (you need a pc to run this)</a>
-      </div>
-    </div>
-    <!-- rain particles & sine wave clouds -->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> Cloudy & Rainy Day </h3>
-        <img src="../images/code-images/rain-clouds-ex.jpg" alt="rain particles and sine wave clouds made with js">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/HnVL6tKdamE?si=ODxaWQLgZElwX5W1"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p>Oct 16, 2023</p>
-        <p> In this piece I combined two algorithms to make a coding remix. The original code comes from p5.js and they
-          are called
-          <a href="https://p5js.org/examples/simulate-particle-system.html">Particle System</a>
-          and
-          <a href="https://p5js.org/examples/math-sine-wave.html">Sine Wave</a>
-          . I used these to give the impression of weather changing over time. The program runs slowly so I suggest watching the video. 
-        </p>
-        <a href="https://noelkc.github.io/noel.portfolio/p5_code/clouds/index.html" target="_blank"> Run Cloudy & Rainy Day (you need a pc to run this)</a>
-      </div>
-    </div>
-    <!-- pikmin clock-->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> Pikmin Clock</h3>
-        <div class="carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-            </svg></button>
-          <button class="carousel-button next" data-carousel-button="next"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-            </svg></button>
-          <ul data-slides>
-            <li class="slide" data-active>
-              <img class="long-img" src="../images/code-images/pikmin-clock/blue_morning_3_26.png" alt="" >
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/code-images/pikmin-clock/blue_morning_9_45.png" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/code-images/pikmin-clock/yellow_night_2_01.png" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/code-images/pikmin-clock/yellow_night_3_13.png" alt="">
-            </li>
-          </ul>
-        </div>
-        <p> 2023</p>
-        <p>This is a Pikmin themed clock I made using p5.js. It is a live clock using your device's clock. </p>
-          <a href="https://noelkc.github.io/noel.portfolio/p5_code/pikmin-clock/index.html" target="_blank"> Run Pikmin Clock (you need a pc to run this)</a>
-      </div>
-    </div>
-    <!-- Halloweenies -->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> HALLOWEENIES </h3>
-        <div class="carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-            </svg></button>
-          <button class="carousel-button next" data-carousel-button="next"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-            </svg></button>
-          <ul data-slides>
-            <li class="slide" data-active>
-              <img class="long-img" src="../images/code-images/halloweenies/Skid_Pump_1reg.png" alt="" >
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/code-images/halloweenies/Skid_Pump_2candy.png" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/code-images/halloweenies/Skid_Pump_full_range.png" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/code-images/halloweenies/rainbow_spook.png" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/code-images/halloweenies/halloweenie-who.jpg" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/code-images/halloweenies/beckett_Bones.png" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/code-images/halloweenies/guzel_Frankie.png" alt="">
-            </li>
-          </ul>
-        </div>
-        <p> 2023</p>
-        <p> This was a collaborative Halloween themed piece with two other artists, Beckett V.L. and Guzel A. We based our pixel art pieces on media we like, Beckett’s was Adventure time, Guzel’s was Monster High, and mine was Skid and Pump.  </p>
-          <a href="https://noelkc.github.io/noel.portfolio/p5_code/halloweenie/index.html" target="_blank"> Run Halloweenie (you need a pc to run this) </a>
       </div>
     </div>
     <!-- Repac & Repossess - pacman -->
@@ -317,17 +173,6 @@
         <p> 2023</p>
         <p> This is my remake of Pacman using p5.js. I have always loved Pacman and I wanted to remake it with a twist. Warning that if playing on Chrome the music audio feature is blocked so you might have to press on the info or help menu first then go back to the homepage. </p>
           <a href="https://noelkc.github.io/noel.portfolio/p5_code/repac/index.html" target="_blank"> Run Pacman (you need a pc to run this)</a>
-      </div>
-    </div>
-    <!-- Childhood Stories  -->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> Childhood Stories </h3>
-        <img src="../images/code-images/childhood-stories.jpg" alt="">
-        <p>Oct 1, 2024</p>
-        <p>Often as children we aren’t told the full story. We see snippets and can gather pieces of information but we don’t end up seeing the full picture until we are older. Even then sometimes people keep the puzzle pieces close to themselves preventing you from putting things together. 
-        </p>
-          <a href="https://noelkc.github.io/pro2-children-stories/index.html" target="_blank"> Link to Childhood Stories </a>
       </div>
     </div>
     <!-- MAMA  -->
@@ -385,86 +230,6 @@
         <h2> DIGITAL ART </h2>
       </div>
     </div>
-    <!-- Glitch Art -->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> Glitch Art </h3>
-        <div class="carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-            </svg></button>
-          <button class="carousel-button next" data-carousel-button="next"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-            </svg></button>
-          <ul data-slides>
-            <li class="slide" data-active>
-              <img class="long-img" src="../images/digital-art/glitch/winged-victory-of-samothrace-g1.jpg" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/digital-art/glitch/withering-mother-og.JPG" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/digital-art/glitch/withering-mother-g1.jpg" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/digital-art/glitch/withering-mother-g2.jpg" alt="">
-            </li>
-            <li class="slide">
-              <img src="../images/digital-art/glitch/nb-dog-og.jpg" alt="">
-            </li>
-            <li class="slide">
-              <img src="../images/digital-art/glitch/nb-dog-g2.jpg" alt="">
-            </li>
-          </ul>
-        </div>
-        <br>
-        <p> Feb 2022</p>
-        <p> To make this piece I used Adobe Photoshop and Audacity. 
-          It was a very interesting experience which I documented <a href="https://docs.google.com/document/d/1eZ51QOaC-8KYy5-YpkKRtR7N1tHI6mrV2PN6bpL_dyU/edit?usp=sharing" target="_blank">here</a> in more detail. I also have a lot more experimental images <a href="https://drive.google.com/drive/folders/1PjbFUQ6inkFfV-cp0XVmHtGkmTOJHbrN?usp=drive_link" target="_blank">here</a> in Google Drive. I had a lot of fun seeing all of the different effects I could achieve from using Audacity in this way</p>
-      </div>
-    </div>
-    <!-- Speedy McGee -->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> Speedy McGee - Pixel Art </h3>
-        <div class="carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-            </svg></button>
-          <button class="carousel-button next" data-carousel-button="next"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-            </svg></button>
-          <ul data-slides>
-            <li class="slide" data-active>
-              <img src="../images/digital-art/speedy/speedy-home.gif" alt="">
-            </li>
-            <li class="slide">
-              <img src="../images/digital-art/speedy/player-idle.gif" alt="">
-            </li>
-            <li class="slide">
-              <img src="../images/digital-art/speedy/speedy-turn-left.gif" alt="">
-            </li>
-            <li class="slide">
-              <img src="../images/digital-art/speedy/player-turn-right.gif" alt="">
-            </li>
-            <li class="slide">
-              <img src="../images/digital-art/speedy/player-hit.gif" alt="">
-            </li>
-          </ul>
-        </div>
-        <br>
-        <p> Oct 2024</p>
-        <p> I made the pixel art for this racing game called, Speedy McGee. The game was coded by dhur4 and it is free to play on Itch.io. 
-          <a href="https://dhur4.itch.io/speedymcgee" target="_blank">The game can be found here</a>. 
-          <a href="https://gnkc.itch.io/speedymcgee" target="_blank">The link to the pixel art files can be found here</a>.  
-          Feel free to download and use these pixel art car files. 
-          </p>
-      </div>
-    </div> 
     <!-- Pixel Art -->
     <div class="content-wrapper">
       <div class="content-bg">
@@ -520,45 +285,6 @@
         <br>
         <p>  2023 - 2025</p>
         <p> These are a series of pixel art drawings I made for fun in my own time. </p>
-      </div>
-    </div>
-    <!-- Low Poly Island -->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> Low Poly Island </h3>
-        <div class="carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-            </svg></button>
-          <button class="carousel-button next" data-carousel-button="next"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-            </svg></button>
-          <ul data-slides>
-            <li class="slide" data-active>
-              <img src="../images/digital-art/3d/td-island-1.png" alt="">
-            </li>
-            <li class="slide">
-              <img src="../images/digital-art/3d/td-island-2.png" alt="">
-            </li>
-            <li class="slide">
-              <img src="../images/digital-art/3d/td-island-3.png" alt="">
-            </li>
-            <li class="slide">
-              <img src="../images/digital-art/3d/td-island-alt-1.png" alt="">
-            </li>
-            <li class="slide">
-              <img src="../images/digital-art/3d/td-island-alt-2.png" alt="">
-            </li>
-            <li class="slide">
-              <img src="../images/digital-art/3d/td-island-alt-3.png" alt="">
-            </li>
-          </ul>
-        </div>
-        <br>
-        <p> Feb 11, 2024</p>
-        <p> A low poly model based on the show Total Drama Island.</p>
       </div>
     </div>
     <!-- Lava Bug -->
@@ -625,24 +351,12 @@
           the video too long so I ended the video differently. </p>
       </div>
     </div>
-    <!-- Limbs Inc. and BUGGIE -->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> Limbs Inc. and BUGGIE </h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/A9J1tp31_Vw?si=8_9zgDrt2v8t9fIR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p>May 12, 2025</p>
-        <p> 3I made a series of 3D models in Blender that I then imported into Max to display. These models were made to go along with a story line I wrote. One story line was about a world where people treat their bodies like interchangeable parts that are used for safety and style. The other storyline was an alternate world where fireflies evolved and made technology to further their communication.  </p>
-        The story lines behind this can be found <a href="https://docs.google.com/document/d/10vrmqhfDIj-4j2IxiEawSSMEWZ6L7seNLpyxLFOP1Sc/edit?usp=sharing">here on this Google Doc</a>. 
-        <br>
-        The slideshow presentation on this can be found <a href="https://docs.google.com/presentation/d/1NRIp2WO1DIPQFT58p2cQOhUF9j0iIM6t1f5260e_0bs/edit?usp=sharing" target="_blank">here on these Google Slides</a>. 
-      </div>
-    </div>
 
     <!-- //  PHOTOGRAPHY & VIDEOS  // -->
     <!-- title -->
     <div class="content-wrapper" id="pho-vid">
       <div class="content-bg orange-bg">
-        <h2> PHOTOGRAPHY </h2>
+        <h2> PHOTOGRAPHY & VIDEO </h2>
       </div>
     </div>
     <!-- photo - Lola Doggy Days -->
@@ -742,13 +456,87 @@
           projects. </p>
       </div>
     </div>
-    <!-- Video Art - The Unicorn -->
+     <!-- photo - myself -->
     <div class="content-wrapper">
       <div class="content-bg">
-        <h3> The Unicorn </h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/mU9IjTjXj5k?si=UMNUSMSw61GEAIOb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p>May 15, 2023</p>
-        <p> This project was made with Adobe Premiere Pro, Adobe Stock, Photoshop, and other videos and photos I found online set to Shel Silverstein's song The Unicorn. </p>
+        <h3> Myself </h3>
+        <!-- arms -->
+        <div class="carousel" data-carousel> 
+          <button class="carousel-button prev" data-carousel-button="prev"><svg xmlns="http://www.w3.org/2000/svg"
+              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
+              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+            </svg></button>
+          <button class="carousel-button next" data-carousel-button="next"><svg xmlns="http://www.w3.org/2000/svg"
+              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
+              <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+            </svg></button>
+          <ul data-slides>
+            <li class="slide" data-active>
+              <img src="../images/photo/myself/arms/arms-1.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/arms/arms-2.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/arms/arms-3.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/arms/arms-4.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/arms/arms-5.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/arms/arms-6.jpg" alt="">
+            </li>
+          </ul>
+        </div>
+        <br>
+        <!-- color arms -->
+        <div class="carousel" data-carousel>
+          <button class="carousel-button prev" data-carousel-button="prev"><svg xmlns="http://www.w3.org/2000/svg"
+              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
+              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+            </svg></button>
+          <button class="carousel-button next" data-carousel-button="next"><svg xmlns="http://www.w3.org/2000/svg"
+              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
+              <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+            </svg></button>
+          <ul data-slides>
+            <li class="slide" data-active>
+              <img src="../images/photo/myself/color-arms/color-arms-1.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/color-arms/color-arms-2.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/color-arms/color-arms-3.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/color-arms/color-arms-4.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/color-arms/color-arms-5.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/color-arms/color-arms-6.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/color-arms/color-arms-7.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/color-arms/color-arms-8.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/color-arms/color-arms-9.jpg" alt="">
+            </li>
+            <li class="slide">
+              <img src="../images/photo/myself/color-arms/color-arms-10.jpg" alt="">
+            </li>
+          </ul>
+        </div>
+        <p> Sep 8, 2025</p>
+        <p> I made crochet arms that I wore as gloves. The pattern was made by me and I used my own body as reference so they fit to my arms. This is appart of another project I am working on.  </p>
       </div>
     </div>
     <!-- Video Art - Broken Memories -->
@@ -765,56 +553,9 @@
 
     <!-- //  Misc  // -->
     <!-- title -->
-    <div class="content-wrapper" id="mics">
+    <div class="content-wrapper" id="misc">
       <div class="content-bg green-bg">
         <h2> MICS. </h2>
-      </div>
-    </div>
-    <!-- The Unicorn -->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> The Unicorn </h3>
-        <div class="carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-            </svg></button>
-          <button class="carousel-button next" data-carousel-button="next"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-            </svg></button>
-          <ul data-slides>
-            <li class="slide" data-active>
-              <img class="long-img" src="../images/misc/unicorn/NoelC-TheUnicorn-PhotoshopEdit.png" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/misc/unicorn/unicorn-front.jpg" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/misc/unicorn/unicorn-three-quarter.jpg" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/misc/unicorn/unicorn-side.jpg" alt="">
-            </li>
-            <li class="slide">
-              <img src="../images/misc/unicorn/unicorn-top.jpg" alt="">
-            </li>
-          </ul>
-        </div>
-        <br>
-        <p> May 2023</p>
-        <p> This was a sculptural piece I made from the book "Where the Sidewalk Ends" by Shel Silverstein, planks of wood, and crochet unicorns I made. I took pictures around the piece but only edited one picture with Photoshop. </p>
-      </div>
-    </div>
-    <!-- Net Ball wired Pokeball -->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> Wire Pokeball </h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/vaIbTWEJzO4?si=RKd3scO8Jxizh-H6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <br>
-        <p> March 2023</p>
-        <p> This is documentation of a Pokeball I made from wire. I tried to document it with stop motion. </p>
-        <a href="https://www.youtube.com/playlist?list=PLeZC2Yk5HoL3jZcfeIR9QASKoQLiDrW-_" target="_blank"> Here is the playlist for Pokeball</a>
       </div>
     </div>
         <!-- Female Body -->
@@ -850,37 +591,6 @@
         <br>
         <p> Sep 2023</p>
         <p> A collage made of magazine clippings, mainly clips from ads and articles that focused on female bodies.  </p>
-      </div>
-    </div>
-    <!-- ALL-Consuming -->
-    <div class="content-wrapper">
-      <div class="content-bg">
-        <h3> ALL-Consuming </h3>
-        <div class="carousel" data-carousel>
-          <button class="carousel-button prev" data-carousel-button="prev"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-            </svg></button>
-          <button class="carousel-button next" data-carousel-button="next"><svg xmlns="http://www.w3.org/2000/svg"
-              height="24px" viewBox="0 -960 960 960" width="24px" fill="#cc00ff">
-              <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-            </svg></button>
-          <ul data-slides>
-            <li class="slide" data-active>
-              <img class="long-img" src="../images/misc/all-consuming/all-consuming-1.jpg" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/misc/all-consuming/all-consuming-2.jpg" alt="">
-            </li>
-            <li class="slide">
-              <img class="long-img" src="../images/misc/all-consuming/all-consuming-display.jpg" alt="">
-            </li>
-          </ul>
-        </div>
-        <br>
-        <p> Oct 12, 2023</p>
-        <p> This is a medal of dishonor that I wear. This medal represents my anxiety about change and how it often makes me hide
-          away from everything. </p>
       </div>
     </div>
     <!-- The Little Things -->
@@ -989,7 +699,7 @@
   <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
   <footer>
     <!-- Start content edits below this line. -->
-    <p>© 2025 by Noel Curtis (GNKC) | <a href="#">gmail: gnkc244</a> </p>
+    <p>© 2025 by Noel Curtis (GNKC) | <a href="#">gmail: gnkc244</a> | <a href="../archive/index.html"> ARCHIVE</a> </p>
 
     <!-- Add or remove any networks. -->
     <ul class="socials">
