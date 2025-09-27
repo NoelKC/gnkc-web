@@ -242,25 +242,18 @@ nav a:hover {
     border-radius: 25%;
     border: 4px solid rgb(9, 255, 0);
     padding: 5px 5px;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: "Audiowide", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
-
-/* makes the image smaller */
-/* @media screen and (max-width:1200px){  
-    .cat-select img {
-        width: 100%;
-    }
-} */
 @media(max-width: 800px) {
     .cat-sidebar {
         width: 100%;
         align-items: center;
         text-align: center;
         padding: 0;
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }
 
