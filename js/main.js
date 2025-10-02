@@ -51,6 +51,7 @@ function init() {
 
     // ~~~~~~ Create Cone Geometry ~~~~~~
     const coneGeometry = new THREE.ConeGeometry(5, 10, 8);
+        coneGeometry.rotateZ(-Math.PI); 
     const coneTexture = new THREE.TextureLoader().load('textures/blue-space.jpeg'); //add textures to cube 
     const coneMaterial = new THREE.MeshBasicMaterial({ map: coneTexture }); //variable of cube when gone 
     // texture.minFilter = THREE.LinearFilter; // makes image sharper but aliased
@@ -59,6 +60,7 @@ function init() {
     scene.add(cone);
     cone.position.y = 4;
     cone.position.z = -10;
+    // cone.
 
     // ~~~~~~ Create Box Geometry ~~~~~~
     const cubeGeometry = new THREE.BoxGeometry(2, 2, 2);
@@ -67,6 +69,7 @@ function init() {
 
     cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
     scene.add(cube);
+    cube.position.y = 2;
     cube.position.x = -5;
     cube.position.z = -5;
 }
@@ -77,22 +80,27 @@ function init() {
 function animate() {
     requestAnimationFrame(animate); // start loop by with frame update
 
-    // →→→→→→ camera animation here ↓↓↓↓
+    // →→→→→→ camera animation here ↓↓↓↓ the camera slowly moves up so you can see the full models better 
     let scrollY = window.scrollY;
     let percentScrolled = window.scrollY / document.body.scrollHeight * 100;
     camera.position.y = scrollY * .001;
 
 
-    // →→→→→→ pikmin animation here ↓↓↓↓
+    // →→→→→→ pikmin animation here ↓↓↓↓ just rotates slowly 
     if (pikmin) {
         pikmin.rotation.y += 0.007;
     }
-    // →→→→→→ cone animation here ↓↓↓↓
-    cone.rotation.y -= 0.05;
+    // →→→→→→ cone animation here ↓↓↓↓ as you scroll down the cone spins faster 
+    let coneYspeed = 0.04; 
+    cone.rotation.y -= coneYspeed + (scrollY * .00001);
+    
 
-    // →→→→→→ cube animation here ↓↓↓↓
+    // →→→→→→ cube animation here ↓↓↓↓ as you scroll it rotates - but when it hits a certian point (digital) it goes crazy 
     cube.rotation.x -= 0.007;
     cube.rotation.y -= 0.007;
+    if (scrollY >= 2500) {
+        cube.rotateY(50); 
+    }; 
 
 
     // always end animation loop with renderer
