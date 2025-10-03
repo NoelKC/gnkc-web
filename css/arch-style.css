@@ -247,6 +247,13 @@ nav a:hover {
     font-weight: 400;
     font-style: normal;
 }
+.cat-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1px 1px;
+    font-size: 2.5rem;
+    color: rgb(9, 255, 0);
+}
+
 @media(max-width: 800px) {
     .cat-sidebar {
         width: 100%;
@@ -254,6 +261,11 @@ nav a:hover {
         text-align: center;
         padding: 0;
         font-size: 4rem;
+    }
+    .cat-bg {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0px 0px;
+        font-size: 2rem;
     }
 }
 
