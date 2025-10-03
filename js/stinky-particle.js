@@ -43,7 +43,8 @@ function init() {
     const torusMaterial = new THREE.PointsMaterial({
         size: .03,
         map: cross,
-        transpartent: true
+        alpha: true
+        
     });
     torus = new THREE.Points(torusGeometry, torusMaterial);
     scene.add(torus);
@@ -66,7 +67,7 @@ function init() {
     const particlesMaterial = new THREE.PointsMaterial({
         size: .005,
         map: heart,
-        transpartent: true
+        alpha: true
     });
 
     particleGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3))

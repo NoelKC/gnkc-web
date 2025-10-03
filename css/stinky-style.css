@@ -323,7 +323,7 @@ h1.content-bg {
 }
 
 @media screen and (max-width:650px) {
-    .stinky .content-wrapper {
+    .port .content-wrapper {
         padding: 15px;
     }
 

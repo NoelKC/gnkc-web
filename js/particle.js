@@ -67,6 +67,7 @@ function init() {
         size: .005,
         map: heart,
         transpartent: true
+        
     });
 
     particleGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3))

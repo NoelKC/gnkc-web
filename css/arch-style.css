@@ -205,11 +205,16 @@ nav a:hover {
     position: fixed;
     top: 15px;
     left: 15px;
-    font-size: 1.6rem;
+    text-align: center;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
     z-index: 998;
     background-color: rgba(240, 248, 255, 0);
     border: 0cap;
-
+    height: 8%;
+    width: 8%;
 }
 /* Cat Sidebar */
 .cat-sidebar {
@@ -250,11 +255,15 @@ nav a:hover {
 .cat-bg {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1px 1px;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: rgb(9, 255, 0);
 }
 
 @media(max-width: 800px) {
+    .cat-select { 
+        height: 12%; 
+        width: 12%;
+    }
     .cat-sidebar {
         width: 100%;
         align-items: center;
